@@ -6,6 +6,9 @@ module com.example.projet_finale {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
+    requires transitive javafx.graphics;
+    requires java.base;
+
     opens com.example.projet_finale to javafx.fxml;
     exports com.example.projet_finale;
 }

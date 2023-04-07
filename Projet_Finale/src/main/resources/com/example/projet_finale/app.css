@@ -1,0 +1,18 @@
+#logo{
+    -fx-border-color: black;
+    -fx-border-radius: 12px;
+
+}
+#connecButton{
+    -fx-border-color: black;
+    -fx-background-color: #f6f1f1;
+}
+.btn1{
+    -fx-background-color: black;
+}
+.btn{
+    -fx-background-color: white;
+}
+#AnchorEven{
+    -fx-border-color: black;
+}
