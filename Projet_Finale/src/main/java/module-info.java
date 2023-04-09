@@ -10,6 +10,8 @@ module com.example.projet_finale {
     requires java.base;
     requires com.fasterxml.jackson.databind;
 
-    opens com.example.projet_finale to javafx.fxml;
+    opens com.example.projet_finale to javafx.fxml, com.fasterxml.jackson.databind;
     exports com.example.projet_finale;
+    exports com.example.projet_finale.controller;
+    opens com.example.projet_finale.controller to com.fasterxml.jackson.databind, javafx.fxml;
 }

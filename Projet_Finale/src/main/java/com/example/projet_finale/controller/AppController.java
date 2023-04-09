@@ -1,5 +1,7 @@
-package com.example.projet_finale;
+package com.example.projet_finale.controller;
 
+import com.example.projet_finale.App;
+import com.example.projet_finale.Layout;
 import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,17 +17,23 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.TextFieldListCell;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AppController implements Initializable {
-
-    @FXML private PasswordField Password;
-    @FXML private CheckBox Afficher;
-    @FXML private TextField Textfield;
     @FXML private ListView<String> presidentsListView = new ListView<>();
+    // singleton
+    private static AppController instance;
+
+    public static AppController getInstance() {
+        if (instance == null) {
+            instance = new AppController();
+        }
+        return instance;
+    }
 
     // Méthodes @FXML
     @FXML private void AfficherFenetre(ActionEvent event){
@@ -34,19 +42,8 @@ public class AppController implements Initializable {
         ChargerFenetre(type.getNomFichier());
     }
 
-    @FXML private void Afficherpassword() {
-        Textfield.textProperty().bindBidirectional((Property<String>) Password.textProperty());
-        if (Afficher.isSelected()) {
-            Password.setVisible(false);
-            Textfield.setVisible(true);
-        } else {
-            Password.setVisible(true);
-            Textfield.setVisible(false);
-        }
-    }
-
     // Méthodes privées
-    private void ChargerFenetre(String NomFichier) {
+    public void ChargerFenetre(String NomFichier) {
         try {
             Parent parent = FXMLLoader.load(App.class.getResource(NomFichier)) ;
             Scene scene = null;

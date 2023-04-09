@@ -1,16 +1,20 @@
 package com.example.projet_finale;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.File;
 import java.io.IOException;
 
 // La classe abstraite User
 public abstract class User {
-    private String name;
+    private String fname;
+    private String lName;
     private String email;
     private String password;
 
-    public User(String name, String email, String password) {
-        this.name = name;
+    public User(String firstName, String lastName, String email, String password) {
+        this.fname = firstName;
+        this.lName = lastName;
         this.email = email;
         this.password = password;
     }
@@ -27,15 +31,24 @@ public abstract class User {
         return objectMapper.readValue(file, User.class);
     }
 
-    // Getters and setters
+    // Getters
     public abstract String getRole();
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getFirstName() {
+        return fname;
+    }
 
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
+    public String getLastName() {
+        return lName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }
