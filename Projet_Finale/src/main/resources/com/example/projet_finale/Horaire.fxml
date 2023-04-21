@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="507.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_finale.controller.AppController">
+ <fx:include source="Student.fxml"/>
+   <children>
+       <AnchorPane layoutX="268.0" layoutY="124.0" prefHeight="36.0" prefWidth="380.0">
+         <children>
+           <Label layoutX="129.0" layoutY="10.0" style="-fx-font-weight: bold;" text="Horaire des cours" />
+         </children>
+       </AnchorPane>
+      <ListView fx:id="presidentsListView" layoutX="268.0" layoutY="160.0" prefHeight="304.0" prefWidth="380.0" />
+   </children>
+  
+</AnchorPane>

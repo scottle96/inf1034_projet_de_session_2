@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 public class Database {
     private ArrayList<Student> students;
-    private ArrayList<Teacher> teachers;
     private static Database databaseInstance = null;
 
     private Database() {
         this.students = new ArrayList<>();
-        this.teachers = new ArrayList<>();
     }
 
     public static Database getInstance() {
@@ -31,19 +29,10 @@ public class Database {
         students.add(s2);
         students.add(s3);
         students.add(s4);
-
-        // ajouter des enregistrements de professeur
-        Teacher t1 = new Teacher("John", "Doe", "john.doe@university.edu", "teach123");
-        Teacher t2 = new Teacher("Jane", "Smith", "jane.smith@college.edu", "teacher1");
-        teachers.add(t1);
-        teachers.add(t2);
     }
 
     public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public ArrayList<Teacher> getTeachers() {
-        return teachers;
-    }
 }

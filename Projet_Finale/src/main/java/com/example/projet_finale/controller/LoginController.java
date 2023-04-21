@@ -27,21 +27,8 @@ public class LoginController {
                 System.out.println("Étudiant connecté : " + s.getFirstName() + " " + s.getLastName());
                 isLoggedIn = true;
                 // afficher interface des etudiants
-                AppController.getInstance().ChargerFenetre(Layout.STUDENT.getNomFichier());
+                AppController.getInstance().ChargerFenetre(Layout.TRAVAUX.getNomFichier());
                 break;
-            }
-        }
-
-        // verification dans la liste de prof
-        if (!isLoggedIn) {
-            for (Teacher t : db.getTeachers()) {
-                if (t.getEmail().equals(emailTextField.getText()) && t.getPassword().equals(passwordField.getText())) {
-                    System.out.println("Professeur connecté : " + t.getFirstName() + " " + t.getLastName());
-                    isLoggedIn = true;
-                    // afficher interface des enseignant
-                    AppController.getInstance().ChargerFenetre(Layout.TEACHER.getNomFichier());
-                    break;
-                }
             }
         }
 

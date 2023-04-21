@@ -1,9 +1,12 @@
 package com.example.projet_finale;
 
 public enum Layout {
-    LOGIN("Connection.fxml"),
+    LOGIN("Login.fxml"),
     STUDENT("Student.fxml"),
-    TEACHER("Teacher.fxml");
+    TEACHER("Teacher.fxml"),
+    TRAVAUX("Travaux.fxml"),
+    NOTE("Note.fxml"),
+    HORAIRE("Horaire.fxml");
     private String nomFichier;
 
     Layout(String nomFichier) {

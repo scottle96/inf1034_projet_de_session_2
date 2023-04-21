@@ -16,7 +16,33 @@
 .btn {
     -fx-background-color: white;
 }
-
-#AnchorEven {
+#Anchor{
+    -fx-border-color: Black;
+    -fx-pref-width:450.0;
+    -fx-pref-height: 380.0;
+}
+.menu-button {
+    -fx-pref-width: 400px;
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-background-color: white;
     -fx-border-color: black;
+    -fx-border-radius: 0;
+}
+
+.menu-item .label {
+    -fx-underline: true;
+
+}
+.menu-item{
+    -fx-pref-width: 400px;
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+}
+.menu-item:hover {
+    -fx-background-color: #CCCCCC;
+}
+
+.menu-item:focused {
+    -fx-background-color: #999999;
 }
