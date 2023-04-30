@@ -61,18 +61,18 @@ public class AppController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
            String[] presidents = {
-                   "INF1034\t\t 11 Mars (19h)         Local 4020",
-                   "PIF1001\t\t 11 Mars (15h)         Local 1500",
-                   "INF1002\t\t 12 Mars (8h30)        Local 3040",
-                   "PIF1005\t\t 14 Mars (8h30)        Local 2100",
-                   "INF1034\t\t 18 Mars (19h)         Local 4020",
-                   "PIF1001\t\t 18 Mars (15h)         Local 1500",
-                   "INF1002\t\t 19 Mars (8h30)        Local 3040",
-                   "PIF1005\t\t 21 Mars (8h30)        Local 2100",
-                   "INF1034\t\t 25 Mars (19h)         Local 4020",
-                   "PIF1001\t\t 25 Mars (15h)         Local 1500",
-                   "INF1002\t\t 26 Mars (8h30)        Local 3040",
-                   "PIF1005\t\t 28 Mars (8h30)        Local 2100"
+                   "\t\tINF1034\t\t11 Mars (19h)\t\tLocal 4020",
+                   "\t\tPIF1001\t\t11 Mars (15h)\t\tLocal 1500",
+                   "\t\tINF1002\t\t12 Mars (8h30)\tLocal 3040",
+                   "\t\tPIF1005\t\t14 Mars (8h30)\tLocal 2100",
+                   "\t\tINF1034\t\t18 Mars (19h)\t\tLocal 4020",
+                   "\t\tPIF1001\t\t18 Mars (15h)\t\tLocal 1500",
+                   "\t\tINF1002\t\t19 Mars (8h30)\tLocal 3040",
+                   "\t\tPIF1005\t\t21 Mars (8h30)\tLocal 2100",
+                   "\t\tINF1034\t\t25 Mars (19h)\t\tLocal 4020",
+                   "\t\tPIF1001\t\t25 Mars (15h)\t\tLocal 1500",
+                   "\t\tINF1002\t\t26 Mars (8h30)\tLocal 3040",
+                   "\t\tPIF1005\t\t28 Mars (8h30)\tLocal 2100"
             };
             ObservableList<String> items = FXCollections.observableArrayList(presidents);
             presidentsListView.setItems(items);
