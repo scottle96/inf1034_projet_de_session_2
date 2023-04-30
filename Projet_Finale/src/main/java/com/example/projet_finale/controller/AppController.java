@@ -37,8 +37,8 @@ public class AppController implements Initializable {
         ChargerFenetre(type.getNomFichier());
     }
 
-    // Méthodes privées
     public void ChargerFenetre(String NomFichier) {
+        System.out.println(NomFichier);
         try {
             Parent parent = FXMLLoader.load(App.class.getResource(NomFichier)) ;
             Scene scene = null;
@@ -82,4 +82,6 @@ public class AppController implements Initializable {
 
     public void handleMenuSelection(ActionEvent actionEvent) {
     }
+
+
 }

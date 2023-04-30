@@ -6,6 +6,7 @@ public enum Layout {
     TEACHER("Teacher.fxml"),
     TRAVAUX("Travaux.fxml"),
     NOTE("Note.fxml"),
+    COURS_NOTE("Cours_note.fxml"),
     HORAIRE("Horaire.fxml");
     private String nomFichier;
 

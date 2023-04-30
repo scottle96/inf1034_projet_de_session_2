@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_finale.controller.NoteController">
+    <fx:include source="Student.fxml" />
+        <GridPane alignment="center" hgap="10" layoutX="324.0" layoutY="135.0" vgap="10">
+
+            <VBox alignment="CENTER" spacing="20">
+                <Label text="Liste des cours et notes" />
+                <TableView fx:id="notesTable" prefHeight="284.0" prefWidth="250">
+                    <columns>
+                        <TableColumn fx:id="typeCol" text="type" />
+                        <TableColumn fx:id="noteCol" text="Note" />
+                        <TableColumn fx:id="midCol" text="Moyenne" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </GridPane>
+
+    </AnchorPane>
